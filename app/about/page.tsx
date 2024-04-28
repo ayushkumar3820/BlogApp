@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { siteConfig } from "@/config/site";
 import { Metadata } from "next";
@@ -32,13 +33,12 @@ export default async function AboutPage() {
           </p>
         </div>
         <p className="text-muted-foreground text-lg py-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum
+        I'm Ayush Kumar , 
+        a software developer specializing in MERN stack technology at Fitelo. 
+        With expertise in MongoDB, Express.js, React.js, and Node.js,
+         I'm dedicated to crafting efficient, user-friendly solutions.
+          Known for my collaborative spirit and problem-solving abilities, 
+          I'm committed to driving innovation and growth at Fitelo through high-quality software development.
         </p>
       </div>
     </div>

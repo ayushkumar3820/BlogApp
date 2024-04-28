@@ -3,11 +3,13 @@ import rehypeSlug from "rehype-slug";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
+// Define a function to compute additional fields for posts
 const computedFields = <T extends { slug: string }>(data: T) => ({
   ...data,
   slugAsParams: data.slug.split("/").slice(1).join("/"),
 });
 
+// Define a collection for posts
 const posts = defineCollection({
   name: "Post",
   pattern: "blog/**/*.mdx",
@@ -19,10 +21,11 @@ const posts = defineCollection({
     published: s.boolean().default(true),
     tags: s.array(s.string()).optional(),
     body: s.string(),
-  }).transform(computedFields),
+  }).transform(computedFields), // Transform the schema using computedFields function
 });
 
-export default defineConfig({
+// Define the configuration for velite
+const config = defineConfig({
   root: "content",
   output: {
     data: ".velite",
@@ -50,3 +53,5 @@ export default defineConfig({
     remarkPlugins: [],
   },
 });
+
+export default config; // Export the configuration
